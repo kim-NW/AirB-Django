@@ -103,7 +103,7 @@ class RoomsDetail(APIView):
 
     def get(self, request, pk):
         room = self.get_object(pk)
-        serializer = RoomDetailSerializer(room)
+        serializer = serializers.RoomDetailSerializer(room)
         return Response(serializer.data)
 
     def put(self, request, pk):
@@ -116,7 +116,7 @@ class RoomsDetail(APIView):
         if serializer.is_valid():
             updated_room = serializer.save()
             return Response(
-                RoomDetailSerializer(updated_room).data,
+                serializers.RoomDetailSerializer(updated_room).data,
             )
         else:
             return Response(serializer.errors)
