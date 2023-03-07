@@ -11,6 +11,9 @@ python = "^3.11"
 django = "^4.1.7"
 selenium = "^4.8.2"
 djangorestframework = "^3.14.0"
+ndg-httpsclient = "^0.5.1"
+pyasn1 = "^0.4.8"
+django-allauth = "^0.52.0"
 
 
 [tool.poetry.group.dev.dependencies]
